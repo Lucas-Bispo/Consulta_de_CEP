@@ -8,6 +8,7 @@ void main() {
     String cep = (querySelector("#cep") as InputElement).value;
     String url = 'http://viacep.com.br/ws/$cep/json/';
 
+    var http;
     var response = await http.get(url);
     var body = json.decode(response.body);
     print(body);
